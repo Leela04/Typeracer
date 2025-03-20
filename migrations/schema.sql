@@ -1,0 +1,30 @@
+CREATE DATABASE typeracer;
+
+USE typeracer;
+
+CREATE TABLE student (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    is_admin BOOLEAN DEFAULT FALSE
+    
+);
+
+CREATE TABLE IF NOT EXISTS results (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    accuracy FLOAT NOT NULL,
+    wpm INT NOT NULL,
+    time_taken FLOAT NOT NULL,
+    score FLOAT NOT NULL,
+    rank INT DEFAULT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES student(id) ON DELETE CASCADE
+
+);
+
+
+
