@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* Add this to your CSS */
+@keyframes backgroundAnimation {
+    0% {
+        background-image: url('/static/images/image1.jpg');
+    }
+    50% {
+        background-image: url('/static/images/image2.jpg');
+        
+    }
+    100% {
+        background-image: url('/static/images/image3.jpg');
+        
+    } 
+    }
+
+/* Apply the animation to the body or any container */
+body {
+    height: 100vh;
+    background: #242e3a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    animation: backgroundAnimation 15s linear infinite;
+}
+
+/* body{
+    height: 100vh;
+    background:#242e3a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }  */
+ .container{
+    background-color: azure;
+    width: 700px;
+    pad: 30px 30px;
+    border-radius: 8px;
+    box-shadow: 5px 20px 50px 10px  rgb(45, 78, 208);
+    
+}
+h1{
+    text-align: center;
+    margin-bottom: 50px;
+    /* padding-top: 20px; */
+}
+.stats{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.stats span{
+    font-size: 800;
+    color: red; 
+}
+#passageTextElement{
+    text-align: justify;
+    margin: 50px 0 30px 0;
+}
+textarea{
+    resize: none;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 5px;
+    font-size: 16px;
+}
+
+
+button{
+    float: right;
+    margin-top: 20px;
+    background-color: rgb(36, 0, 128);
+    color:white;
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 5px;
+    /* margin-left: 5px; */
+}   
+
+.result{
+    margin-top: 40px;
+    display: none;
+    }
+.result h3{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+.wrapper span{
+    font-weight: 600;
+    }
+.success{
+    color: green;
+}
+.fail{
+    color: red;
+}
+.error {
+    color: red;
+    font-weight: bold;
+}
