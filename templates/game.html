@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQ-TypeRacer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+    <div class="container">
+        
+        <h1>TypeRacer</h1>
+        <div class="stats">
+            <p>Timer: <span id="timer">10 min</span></p>
+        </div>
+        
+        <div id="passageTextElement">This is a typing test passage. Try to type it as fast and as accurately as you can!</div>
+        <div id="input_area">
+            <textarea name="quotes" id="quoteInput" placeholder="Type here" disabled
+            onpaste="alert('Copy-paste is not allowed!'); return false;"
+            oncopy="alert('Copying is not allowed!'); return false;"></textarea>
+        </div>
+        <button type= "button" id="start-test" onclick="startTest()">Start </button>
+        <button type="button" id="next-test" onclick="nextPassage()" style="display:none;">
+            Next 
+        </button>
+        <button type= "button" id="stop-test" onclick="submitFinalResult()" style="display:none" >Submit</button>
+
+        <div class="result" style="display:none;">
+            <h3>Result</h3>
+            <div class="wrapper">
+                <p>Accuracy: <span id="acc"></span></p> 
+                <p>Speed:  <span id="wpm"></span></p> 
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>
