@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typeRacer Results</title>
+    <style>
+        table { width: 80%; margin: auto; border-collapse: collapse; text-align: center; }
+        th, td { border: 1px solid black; padding: 10px; }
+        th { background-color: #f2f2f2; }
+    </style>
+
+</head>
+<body>
+    <h2 style="text-align: center;">Typing Test Rankings</h2>
+
+    
+        
+    <table>
+        <thead>
+            <tr>
+                <th>S.no</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Accuracy</th>
+                <th>WPM</th>
+                <th>Time Taken</th>
+                <th>Score</th>      <!-- New Column -->
+                <th>Rank</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <!--% for rank , result in enumerate(results, start=1) %} -->
+            {% for result in results %}
+
+            <tr>
+                <td> {{loop.index}}</td>
+                <td>{{ result.name }}</td>
+                <td>{{ result.email }}</td>  
+                <td>{{ result.accuracy }}%</td>
+                <td>{{ result.wpm }}</td>
+                <td>{{ result.time_taken }}min</td>
+                <td>{{ result.score }}</td>         <!-- Score -->
+                <td>{{ result.rank }}</td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>
