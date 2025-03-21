@@ -7,14 +7,14 @@
 /* Add this to your CSS */
 @keyframes backgroundAnimation {
     0% {
-        background-image: url('/static/images/image1.jpg');
+        background-image: url('/static/image1.jpg');
     }
     50% {
-        background-image: url('/static/images/image2.jpg');
+        background-image: url('/static/image2.jpg');
         
     }
     100% {
-        background-image: url('/static/images/image3.jpg');
+        background-image: url('/static/image3.jpg');
         
     } 
     }
