@@ -10,6 +10,11 @@
     {
       "src": "/(.*)",
       "dest": "/setup/app.py"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
     }
+
   ]
 }
